@@ -13,3 +13,9 @@ median = numpy.median(data)
 mode = stats.mode(data)
 
 print("mean: {}, median: {}, mode: {}".format(mean, median, mode))
+
+# numpy can also give us the standard deviation & variance
+stddev = numpy.std(data)
+var = numpy.var(data)
+
+print("standard deviation: {}, variance: {}".format(stddev, var))
