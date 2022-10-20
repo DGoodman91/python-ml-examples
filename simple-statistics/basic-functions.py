@@ -3,13 +3,13 @@ import random
 from scipy import stats
 
 # use random's sample function to generate a list of numbers
-data = random.sample(range(1,100), 20)
+data = random.sample(range(1, 100), 20)
 
 # numpy gives us basic stat methods
 mean = numpy.mean(data)
 median = numpy.median(data)
 
-# mode() fnc returns a ModeResult object w/ modes and counts
+# mode() function returns a ModeResult object w/ modes and counts
 mode = stats.mode(data)
 
 print("mean: {}, median: {}, mode: {}".format(mean, median, mode))
@@ -18,4 +18,8 @@ print("mean: {}, median: {}, mode: {}".format(mean, median, mode))
 stddev = numpy.std(data)
 var = numpy.var(data)
 
+# remember std dev is sqrt(var), and tells us how far on average the values are from the mean
 print("standard deviation: {}, variance: {}".format(stddev, var))
+
+# we can easily get percentiles - what value is x% of the data less than
+("25. percentile: {}, 75. percentile: {}".format(numpy.percentile(data, 25), numpy.percentile(data, 75)))
