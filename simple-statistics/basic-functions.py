@@ -1,3 +1,7 @@
+#
+# examples of basic stats functions in the numpy & scipy modules
+#
+
 import numpy
 import random
 from scipy import stats
