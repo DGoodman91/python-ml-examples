@@ -15,8 +15,12 @@ ydata = [100, 90, 80, 60, 60, 55, 60, 65,
 # first, let's try linear analysis and see what our r says
 # we'll create the line of best fit and draw it to illustrate the difference between linear & polynomial fits for this data set
 slope, intercept, r, p, std_err = stats.linregress(xdata, ydata)
+
+
 def linear_regression_pred(x):
     return slope * x + intercept
+
+
 line_of_linear_regression = list(map(linear_regression_pred, xdata))
 
 print("r value when attempting linear regression analysis is {}".format(r))
@@ -29,7 +33,8 @@ poly_line = numpy.linspace(min(xdata), max(xdata), 100)
 
 # similar to the linear analysis r value, we can calculate an "r-squared" value for our polynomial regression analysis
 # between 0 & 1, 1 from no-correlation to complete-correlation
-print("r-squared value when attempting polynomial regression analysis of degree {} is {}".format(polynomial_degree, r2_score(ydata, poly_model(xdata))))
+print("r-squared value when attempting polynomial regression analysis of degree {} is {}".format(
+    polynomial_degree, r2_score(ydata, poly_model(xdata))))
 
 # we can see the r-squared value with a degree-3 polynomial regression is high (0.94) we can use the poly_model model to
 # predict the y value for any x value
@@ -38,5 +43,4 @@ print("our model predicts a y value for an x of 17 to be {}".format(poly_model(1
 pyplot.scatter(xdata, ydata)
 pyplot.plot(xdata, line_of_linear_regression)
 pyplot.plot(poly_line, poly_model(poly_line))
-pyplot.show() 
-
+pyplot.show()

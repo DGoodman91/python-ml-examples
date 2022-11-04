@@ -13,8 +13,12 @@ ydata = [32, 43, 23, 20]
 slope, intercept, r, p, std_err = stats.linregress(xdata, ydata)
 
 # create a list of 'best fit' y values for the x's
+
+
 def linear_regression_pred(x):
     return slope * x + intercept
+
+
 line_of_linear_regression = list(map(linear_regression_pred, xdata))
 
 # note that the two array arg must be the same length to avoid a ValueError

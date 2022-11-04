@@ -26,4 +26,4 @@ var = numpy.var(data)
 print("standard deviation: {}, variance: {}".format(stddev, var))
 
 # we can easily get percentiles - what value is x% of the data less than
-("25. percentile: {}, 75. percentile: {}".format(numpy.percentile(data, 25), numpy.percentile(data, 75)))
+print("25. percentile: {}, 75. percentile: {}".format(numpy.percentile(data, 25), numpy.percentile(data, 75)))

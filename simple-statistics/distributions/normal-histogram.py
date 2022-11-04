@@ -13,6 +13,6 @@ distdata = numpy.random.normal(5.0, 1.0, 100000)
 # numpy module with extra info about the generated dataset
 
 # mathplotlib is a library for creating visualisations
-# here we create a simple histogram to show our data 
+# here we create a simple histogram to show our data
 pyplot.hist(distdata)
 pyplot.show()
